@@ -19,9 +19,13 @@ With all the software and hardware working, Mr. Heckendorn created a sleek enclo
 
 Detail of steps:
 
-. . .
+ - Compile kernel - enable GPIO matrix module
 
-Create a UDEV rule:
+ - Create and compile device tree overlay for GPIO . . .
+
+ - Create and compile device tree overlay for TFT . . .
+
+ - Create a UDEV rule:
 
    sudo nano /etc/udev/rules.d/10-<name>.rules
    SUBSYSTEM=="input", ATTRS{name}=="<name>", ENV{ID_INPUT_KEYBOARD}="1"
