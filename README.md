@@ -20,8 +20,16 @@ With all the software and hardware working, Mr. Heckendorn created a sleek enclo
 Detail of steps:
 
 . . .
+Create a UDEV rule
+   sudo nano /etc/udev/rules.d/10-<name>.rules
+   SUBSYSTEM=="input", ATTRS{name}=="<name>", ENV{ID_INPUT_KEYBOARD}="1"
+. . .
 
 References:
 
-. . .
+http://blog.gegg.us/2017/08/a-matrix-keypad-on-a-raspberry-pi-done-right/
+https://github.com/adafruit/Adafruit-Retrogame
+https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h
+https://www.raspberrypi.org/documentation/linux/kernel/building.md
+
 
