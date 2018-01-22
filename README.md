@@ -20,9 +20,12 @@ With all the software and hardware working, Mr. Heckendorn created a sleek enclo
 Detail of steps:
 
 . . .
-Create a UDEV rule
+
+Create a UDEV rule:
+
    sudo nano /etc/udev/rules.d/10-<name>.rules
    SUBSYSTEM=="input", ATTRS{name}=="<name>", ENV{ID_INPUT_KEYBOARD}="1"
+
 . . .
 
 References:
