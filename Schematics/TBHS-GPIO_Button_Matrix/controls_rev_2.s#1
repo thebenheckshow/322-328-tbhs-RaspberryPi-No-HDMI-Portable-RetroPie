@@ -293,9 +293,9 @@ high speed</description>
 <sheets>
 <sheet>
 <plain>
-<text x="-5.08" y="81.28" size="5.08" layer="97" rot="R90">Drive</text>
-<text x="33.02" y="25.4" size="5.08" layer="97">Detect</text>
-<text x="-25.4" y="40.64" size="5.08" layer="97">Current</text>
+<text x="-33.02" y="93.98" size="5.08" layer="97">Drive</text>
+<text x="38.1" y="17.78" size="5.08" layer="97">Detect</text>
+<text x="-25.4" y="12.7" size="5.08" layer="97">Current</text>
 </plain>
 <instances>
 <instance part="UP" gate="G$1" x="22.86" y="119.38" smashed="yes" rot="MR270">
@@ -879,11 +879,11 @@ high speed</description>
 </net>
 <net name="N$1" class="0">
 <segment>
-<wire x1="-12.7" y1="48.26" x2="-12.7" y2="55.88" width="2.54" layer="91"/>
-<wire x1="-12.7" y1="55.88" x2="-22.86" y2="55.88" width="2.54" layer="91"/>
-<wire x1="-22.86" y1="55.88" x2="-20.32" y2="58.42" width="2.54" layer="91"/>
-<wire x1="-20.32" y1="58.42" x2="-20.32" y2="53.34" width="2.54" layer="91"/>
-<wire x1="-20.32" y1="53.34" x2="-22.86" y2="55.88" width="2.54" layer="91"/>
+<wire x1="-12.7" y1="22.86" x2="-12.7" y2="60.96" width="2.54" layer="91"/>
+<wire x1="-12.7" y1="60.96" x2="-30.48" y2="60.96" width="2.54" layer="91"/>
+<wire x1="-30.48" y1="60.96" x2="-27.94" y2="63.5" width="2.54" layer="91"/>
+<wire x1="-27.94" y1="63.5" x2="-27.94" y2="58.42" width="2.54" layer="91"/>
+<wire x1="-27.94" y1="58.42" x2="-30.48" y2="60.96" width="2.54" layer="91"/>
 </segment>
 </net>
 </nets>
