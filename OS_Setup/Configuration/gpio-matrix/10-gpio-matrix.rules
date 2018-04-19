@@ -1,0 +1,3 @@
+#/etc/udev/rules.d/
+SUBSYSTEM=="input", ATTRS{name}=="gpio-matrix", ENV{ID_INPUT_KEYBOARD}="1"
+

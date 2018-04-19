@@ -1,0 +1,54 @@
+ /dts-v1/;
+    /plugin/;
+    / {
+           compatible = "brcm,bcm2835", "brcm,bcm2708", "brcm,bcm2709";
+
+           fragment@0 {
+              target-path = "/";
+              __overlay__ {
+                 keypad: gpio-matrix {
+                    compatible = "gpio-matrix-keypad";
+                    debounce-delay-ms = <10>;
+                    col-scan-delay-us = <10>;
+                    /*
+                       try to use GPIO only lines
+                       to keep SPI and I2C usable
+                    */
+					      // work    new
+                    row-gpios = <&gpio 22 0   // 24    0
+                                 &gpio 27 0   // 23    1
+                                 &gpio 25 0   // 26    2
+                                 &gpio 21 0>; // 20    3
+
+                    col-gpios = <&gpio 24 0   // 22    0
+                                 &gpio 23 0   // 27    1
+                                 &gpio 26 0   // 25    2
+                                 &gpio 20 0>; // 21    3
+                    /*
+                      Keycodes from /usr/include/linux/input-event-codes.h
+                      converted to hex using printf '%02x\n'
+                    */
+
+                    linux,keymap = <
+                                 // Keymap Entry     col  row  input
+                                    0x00000067    // col0 row0 KEY_UP
+                                    0x0100003E    // col0 row1 KEY_F4
+                                    0x0200000E    // col0 row2 KEY_BACKSPACE
+                                    0x03000015    // col0 row3 KEY_Y--------------
+                                    0x00010069    // col1 row0 KEY_LEFT
+                                    0x0101001D    // col1 row1 KEY_LEFTCTRL
+                                    0x0201001C    // col1 row2 KEY_ENTER
+                                    0x0301002C    // col1 row3 KEY_Z --------------
+                                    0x0002006A    // col2 row0 KEY_RIGHT
+                                    0x0102006F    // col2 row1 KEY_DELETE
+                                    0x0202001E    // col2 row2 KEY_A
+                                    0x03020030    // col2 row3 KEY_B ---------------
+                                    0x0003006C    // col3 row0 KEY_DOWN
+                                    0x01030001    // col3 row1 KEY_ESC
+                                    0x0203002D    // col3 row2 KEY_X
+                                    0x0303002E>;  // col3 row3 KEY_C ---------------KEY_LEFT
+                 };
+              };
+           };
+      };
+

@@ -1,0 +1,3 @@
+# dtc -W no-unit_address_vs_reg -I dts -O dtb -o ./overlays/gpio-matrix.dtbo gpio-matrix.dts
+dtoverlay=gpio-matrix
+
